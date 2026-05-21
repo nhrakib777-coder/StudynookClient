@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer tailwind-base {
+  
+}
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+
+:root {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #050816;
+  --border: #2e303a;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
