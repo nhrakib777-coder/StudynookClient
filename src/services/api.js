@@ -1,7 +1,12 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  // AUTOMATIC USES LOCAL OR VERCEL URL
+  baseURL: import.meta.env.VITE_API_URL 
+    || "https://studynookclient.vercel.app/api",
+
+  // Required for login/auth to work on Vercel
+  withCredentials: true,
 });
 
 export default api;
